@@ -1,0 +1,48 @@
+- id: 1
+  category: Compiler
+  software: GCC
+  status: Enabled
+  type: Toolchain
+  riscvEnablement: "https://github.com/riscv-collab/riscv-gcc"
+
+- id: 2
+  category: Compiler
+  software: LLVM/Clang
+  status: In Progress
+  type: Toolchain
+  riscvEnablement: "https://github.com/llvm/llvm-project"
+
+- id: 3
+  category: Library
+  software: glibc
+  status: TBD
+  type: Runtime
+  riscvEnablement: "https://sourceware.org/glibc/"
+
+- id: 4
+  category: Library
+  software: musl
+  status: Optimized
+  type: Runtime
+  riscvEnablement: "https://musl.libc.org/"
+
+- id: 5
+  category: OS
+  software: Fedora
+  status: Enabled
+  type: Distribution
+  riscvEnablement: "https://fedoraproject.org/wiki/Architectures/RISC-V"
+
+- id: 6
+  category: OS
+  software: RPSene
+  status: Enabled
+  type: Distribution
+  riscvEnablement: "https://fedoraproject.org/wiki/Architectures/RISC-V"
+
+- id: 7
+  category: OS
+  software: RPSene
+  status: Enabled
+  type: Distribution
+  riscvEnablement: "https://fedoraproject.org/wiki/Architectures/RISC-V"

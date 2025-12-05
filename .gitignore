@@ -1,0 +1,86 @@
+# --------------------------
+# Node / Build Artifacts
+# --------------------------
+node_modules/
+dist/
+dist-ssr/
+tmp/
+temp/
+
+# --------------------------
+# Vite
+# --------------------------
+.vite/
+.vite-inspect/
+vite.config.timestamp-*.mjs
+
+# --------------------------
+# Logs
+# --------------------------
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# --------------------------
+# Local Environment
+# --------------------------
+.env
+.env.local
+.env.*.local
+
+# Ignore environment files but keep sample
+!.env.example
+
+# --------------------------
+# Editor Noise
+# --------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*.DS_Store
+
+# --------------------------
+# OS Files
+# --------------------------
+.DS_Store
+Thumbs.db
+
+# --------------------------
+# Coverage / Testing
+# --------------------------
+coverage/
+*.lcov
+
+# --------------------------
+# Typescript
+# --------------------------
+*.tsbuildinfo
+
+# --------------------------
+# Cache
+# --------------------------
+.cache/
+.parcel-cache/
+.eslintcache
+stylelintcache
+
+# --------------------------
+# MacOS Finder Artifacts
+# --------------------------
+.apdisk
+
+# --------------------------
+# GitHub Pages Build Outputs (if using gh-pages branch)
+# --------------------------
+gh-pages/
+out/
+
+# --------------------------
+# Locks (optional to ignore if causing conflicts)
+# --------------------------
+package-lock.json
+pnpm-lock.yaml
+yarn.lock

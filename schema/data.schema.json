@@ -1,0 +1,40 @@
+{
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [
+        "id",
+        "category",
+        "software",
+        "status",
+        "type",
+        "riscvEnablement"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": ["integer", "string"]
+        },
+        "category": {
+          "type": "string",
+          "minLength": 1
+        },
+        "software": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "type": "string",
+          "enum": ["Enabled", "In Progress", "TBD", "Optimized"]
+        },
+        "type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "riscvEnablement": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    }
+  }
