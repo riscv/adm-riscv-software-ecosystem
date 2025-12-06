@@ -45,7 +45,7 @@
   software: "Firefox"
   status: In Progress
   type: Open Source
-  riscvEnablement: "Supported by the various individual Linux OS Distributions"
+  riscvEnablement: "https://github.com/plctlab/gecko-dev-riscv/"
 
 - id: 8
   category: Browser
@@ -80,7 +80,7 @@
   software: "MariaDB"
   status: In Progress
   type: Open Source
-  riscvEnablement: "https://riscv.org/blog/2023/08/risc-v-public-beta-platform-release-·-database-adaptation-evaluation-on-risc-v-server/"
+  riscvEnablement: "https://riscv.org/blog/2023/08/risc-v-public-beta-platform-release-database-adaptation-evaluation-on-risc-v-server/"
 
 - id: 13
   category: Databases
@@ -101,7 +101,7 @@
   software: "MongoDB"
   status: In Progress
   type: Open Source
-  riscvEnablement: "https://riscv.org/blog/2023/08/risc-v-public-beta-platform-release-·-database-adaptation-evaluation-on-risc-v-server/"
+  riscvEnablement: "https://riscv.org/blog/2023/08/risc-v-public-beta-platform-release-database-adaptation-evaluation-on-risc-v-server/"
 
 - id: 16
   category: Databases
