@@ -6,7 +6,6 @@ import FiltersBar from "./components/FiltersBar";
 import StatusDonut from "./components/StatusDonut";
 import DataTable from "./components/DataTable";
 
-const AUTO_REFRESH_SECONDS = 300; // 5 minutes
 const PAGE_SIZE = 100;
 
 type Row = {
@@ -33,10 +32,6 @@ const App: React.FC = () => {
   const [page, setPage] = useState(1);
   const [showAll, setShowAll] = useState(false);
 
-  const [secondsRemaining, setSecondsRemaining] = useState(
-    AUTO_REFRESH_SECONDS
-  );
-
   const [sortConfig, setSortConfig] = useState<{
     key: "software" | "category" | "status" | "type";
     direction: "asc" | "desc";
@@ -44,6 +39,17 @@ const App: React.FC = () => {
     key: "software",
     direction: "asc",
   });
+
+  // Static site: build-time or fallback last updated
+  const lastUpdated =
+    import.meta.env.VITE_BUILD_TIME ||
+    new Date().toLocaleString(undefined, {
+      year: "numeric",
+      month: "short",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+    });
 
   // Fetch YAML once per page load
   useEffect(() => {
@@ -69,21 +75,6 @@ const App: React.FC = () => {
     loadData();
   }, []);
 
-  // Auto-refresh countdown
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setSecondsRemaining((prev) => {
-        if (prev <= 1) {
-          window.location.reload();
-          return AUTO_REFRESH_SECONDS;
-        }
-        return prev - 1;
-      });
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   // Filter options
   const categoryOptions = useMemo(() => {
     const set = new Set(rawData.map((d) => d.category).filter(Boolean));
@@ -100,7 +91,7 @@ const App: React.FC = () => {
     return ["All", ...Array.from(set).sort()];
   }, [rawData]);
 
-  // 1) Filters (Category / Type / Status) – for table & export only
+  // 1) Filters (Category / Type / Status) – table + export only
   const filteredByFilters = useMemo(() => {
     let out = [...rawData];
 
@@ -117,7 +108,7 @@ const App: React.FC = () => {
     return out;
   }, [rawData, filters]);
 
-  // 2) Search – table/export only
+  // 2) Search – table + export only (NOT chart)
   const filteredData = useMemo(() => {
     if (!search.trim()) return filteredByFilters;
 
@@ -131,7 +122,7 @@ const App: React.FC = () => {
     );
   }, [filteredByFilters, search]);
 
-  // 3) Sorting – on Software / Category / Status only
+  // 3) Sorting – on Software / Category / Status / Type
   const sortedData = useMemo(() => {
     const copy = [...filteredData];
 
@@ -174,6 +165,7 @@ const App: React.FC = () => {
         Category: row.category,
         Software: row.software,
         Status: row.status,
+        Type: row.type,
         "RISC-V Enablement": row.riscvEnablement,
       }))
     );
@@ -222,10 +214,7 @@ const App: React.FC = () => {
     <div className="min-h-screen bg-slate-50 text-slate-900">
       <div className="max-w-6xl mx-auto px-4 py-6 space-y-6">
         {/* 1. Header */}
-        <Header
-          secondsRemaining={secondsRemaining}
-          totalCount={rawData.length}
-        />
+        <Header lastUpdated={lastUpdated} totalCount={rawData.length} />
 
         {/* 2. Chart – global, UNFILTERED */}
         <StatusDonut data={rawData} />

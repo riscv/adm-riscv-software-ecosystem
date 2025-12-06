@@ -1,48 +1,776 @@
 - id: 1
-  category: Compiler
-  software: GCC
+  category: ACT Compliance Tests
+  software: "RISC-V Architecture Tests"
   status: Enabled
-  type: Toolchain
-  riscvEnablement: "https://github.com/riscv-collab/riscv-gcc"
+  type: Open Source
+  riscvEnablement: "https://github.com/riscv-non-isa/riscv-arch-test/blob/main/doc/README.adoc#"
 
 - id: 2
-  category: Compiler
-  software: LLVM/Clang
-  status: In Progress
-  type: Toolchain
-  riscvEnablement: "https://github.com/llvm/llvm-project"
+  category: AI
+  software: "TensorFlow"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.reddit.com/r/RISCV/comments/o4u9e7/machine_learning_on_riscv_bl602_with_tensorflow/"
 
 - id: 3
-  category: Library
-  software: glibc
-  status: TBD
-  type: Runtime
-  riscvEnablement: "https://sourceware.org/glibc/"
+  category: AI
+  software: "PyTorch"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://github.com/pytorch/pytorch/issues/129553"
 
 - id: 4
-  category: Library
-  software: musl
-  status: Optimized
-  type: Runtime
-  riscvEnablement: "https://musl.libc.org/"
+  category: API
+  software: "oneAPI Construction Kit"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/codeplaysoftware/oneapi-construction-kit"
 
 - id: 5
-  category: OS
-  software: Fedora
+  category: API (Distributed Memory)
+  software: "Open MPI"
   status: Enabled
-  type: Distribution
-  riscvEnablement: "https://fedoraproject.org/wiki/Architectures/RISC-V"
+  type: Open Source
+  riscvEnablement: "https://www.open-mpi.org/projects/hwloc/"
 
 - id: 6
-  category: OS
-  software: RPSene
+  category: API (Shared Memory)
+  software: "OpenMP"
   status: Enabled
-  type: Distribution
-  riscvEnablement: "https://fedoraproject.org/wiki/Architectures/RISC-V"
+  type: Open Source
+  riscvEnablement: "https://www.openmp.org"
 
 - id: 7
-  category: OS
-  software: RPSene
+  category: Browser
+  software: "Firefox"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "Supported by the various individual Linux OS Distributions"
+
+- id: 8
+  category: Browser
+  software: "Chrome"
+  status: TBD
+  type: Commercial
+  riscvEnablement: "https://www.google.com/chrome"
+
+- id: 9
+  category: Build Tool
+  software: "Buildroot"
   status: Enabled
-  type: Distribution
-  riscvEnablement: "https://fedoraproject.org/wiki/Architectures/RISC-V"
+  type: Open Source
+  riscvEnablement: "https://www.embecosm.com/2018/09/19/adding-risc-v-64-bit-support-to-buildroot/"
+
+- id: 10
+  category: Cloud
+  software: "OpenStack"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://riscv-europe.org/summit/2024/media/proceedings/posters/123_poster.pdf"
+
+- id: 11
+  category: Container Orchestration
+  software: "Kubernetes"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://github.com/CARV-ICS-FORTH/kubernetes-riscv64"
+
+- id: 12
+  category: Databases
+  software: "MariaDB"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://riscv.org/blog/2023/08/risc-v-public-beta-platform-release-·-database-adaptation-evaluation-on-risc-v-server/"
+
+- id: 13
+  category: Databases
+  software: "Memcached"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://github.com/memcached/memcached"
+
+- id: 14
+  category: Databases
+  software: "PostgreSQL"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://www.postgresql.org/docs/current/supported-platforms.html#SUPPORTED-PLATFORMS"
+
+- id: 15
+  category: Databases
+  software: "MongoDB"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://riscv.org/blog/2023/08/risc-v-public-beta-platform-release-·-database-adaptation-evaluation-on-risc-v-server/"
+
+- id: 16
+  category: Databases
+  software: "MySQL"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://forum.sophgo.com/t/risc-v-public-beta-platform-released-use-ycsb-to-test-mysql-performance-on-sg2042/257"
+
+- id: 17
+  category: Firmware
+  software: "coreboot"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://doc.coreboot.org/arch/riscv/index.html"
+
+- id: 18
+  category: Firmware
+  software: "U-Boot"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/u-boot/u-boot/blob/master/doc/arch/riscv.rst"
+
+- id: 19
+  category: Firmware
+  software: "oreboot"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/oreboot/oreboot/tree/main/src/arch/src/riscv64"
+
+- id: 20
+  category: GNU Toolchain
+  software: "GNU Mes"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://nlnet.nl/project/GNUMes-RISCV/"
+
+- id: 21
+  category: GNU Toolchain
+  software: "GNU Binutils"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://sourceware.org/binutils/docs/as.html#RISC_002dV_002dDependent"
+
+- id: 22
+  category: GNU Toolchain
+  software: "GCC"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/gcc-mirror/gcc/tree/master/gcc/config/riscv"
+
+- id: 23
+  category: GNU Toolchain
+  software: "GCC (RISC-V Options)"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://gcc.gnu.org/onlinedocs/gcc/RISC-V-Options.html"
+
+- id: 24
+  category: GNU Toolchain
+  software: "GDB"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://sourceware.org/gdb/current/onlinedocs/gdb.html/RISC_002dV-Features.html"
+
+- id: 25
+  category: GNU Toolchain
+  software: "glibc"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://sourceware.org/glibc/manual/latest/html_mono/libc.html#RISC_002dV"
+
+- id: 26
+  category: GNU Toolchain
+  software: "GnuTLS"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://mirror.math.princeton.edu/pub/alt/risc-v/logs/gnutls-3.6.2-1.fc29.0.riscv64.src.rpm/"
+
+- id: 27
+  category: Hypervisor
+  software: "Salus"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/rivosinc/salus"
+
+- id: 28
+  category: Hypervisor
+  software: "Xvisor"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/xvisor/xvisor"
+
+- id: 29
+  category: Hypervisor
+  software: "KVM"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/kvm-riscv/linux"
+
+- id: 30
+  category: Hypervisor
+  software: "VMware Confidential Computing"
+  status: TBD
+  type: Commercial
+  riscvEnablement: "https://news.broadcom.com/releases/vmware-and-industry-leaders-accelerate-adoption-of-confidential-computing"
+
+- id: 31
+  category: Hypervisor
+  software: "Wind River Helix"
+  status: TBD
+  type: Commercial
+  riscvEnablement: "https://www.windriver.com/products/helix"
+
+- id: 32
+  category: Hypervisor
+  software: "Bao Hypervisor"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/bao-project/bao-hypervisor"
+
+- id: 33
+  category: IoT document scanner control API
+  software: "TWAIN Direct"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/twain/twain-direct"
+
+- id: 34
+  category: ISA Simulator
+  software: "Imperas RISC-V OVPsim Plus"
+  status: Enabled
+  type: Commercial
+  riscvEnablement: "https://github.com/riscv-ovpsim/imperas-riscv-tests/blob/v20230724/riscv-ovpsim-plus/README.md"
+
+- id: 35
+  category: Languages
+  software: "OpenJDK"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://wiki.openjdk.org/display/RISCVPort"
+
+- id: 36
+  category: Languages
+  software: "Eclipse Temurin"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://adoptium.net/blog/2024/04/eclipse-temurin-21-and-22-available-on-riscv/"
+
+- id: 37
+  category: Languages
+  software: "Python"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://riscv-python-model.readthedocs.io/en/latest/"
+
+- id: 38
+  category: Languages
+  software: "OCaml"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/ocaml/ocaml?tab=readme-ov-file#overview"
+
+- id: 39
+  category: Languages
+  software: "Go"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://go.dev/dl/"
+
+- id: 40
+  category: Languages
+  software: "Rust"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://wiki.riscv.org/display/HOME/Language+Runtimes#LanguageRuntimes-RISC-Vstatus.5"
+
+- id: 41
+  category: Linux Kernel
+  software: "Linux (KVM RISC-V)"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/kvm-riscv/linux"
+
+- id: 42
+  category: Linux Kernel
+  software: "eBPF"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/eunomia-bpf/eunomia-bpf/pull/152"
+
+- id: 43
+  category: Linux Kernel
+  software: "Ftrace"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://elinux.org/Ftrace"
+
+- id: 44
+  category: LLVM Toolchain
+  software: "LLDB"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://lldb.llvm.org/"
+
+- id: 45
+  category: LLVM Toolchain
+  software: "LLVM"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://llvm.org/docs/RISCVUsage.html"
+
+- id: 46
+  category: LLVM Toolchain
+  software: "LLVM (RISC-V Usage)"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://llvm.org/docs/RISCVUsage.html"
+
+- id: 47
+  category: LLVM Toolchain
+  software: "Clang"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/llvm/llvm-project/tree/main/llvm/lib/Target/RISCV"
+
+- id: 48
+  category: Math Library
+  software: "SLEEF"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://sleef.org/"
+
+- id: 49
+  category: Math Library
+  software: "GSL BLAS"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.gnu.org/software/gsl/doc/html/blas.html"
+
+- id: 50
+  category: Math Library
+  software: "OpenBLAS"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/OpenMathLib/OpenBLAS"
+
+- id: 51
+  category: Networking
+  software: "OpenIB"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/OpenIB/OpenIB"
+
+- id: 52
+  category: Networking
+  software: "DPDK"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://doc.dpdk.org/guides/linux_gsg/cross_build_dpdk_for_riscv.html"
+
+- id: 53
+  category: Networking
+  software: "WireGuard (Linux)"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/WireGuard/wireguard-linux/tree/stable/arch/riscv"
+
+- id: 54
+  category: Networking
+  software: "Open vSwitch"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.kernelconfig.io/config_openvswitch?q=&kernelversion=6.10.8&arch=riscv"
+
+- id: 55
+  category: Networking
+  software: "OpenVPN"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://github.com/OpenVPN"
+
+- id: 56
+  category: Operating System
+  software: "Zephyr RTOS"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://docs.zephyrproject.org/latest/hardware/arch/risc-v.html"
+
+- id: 57
+  category: Operating System
+  software: "Android"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://source.android.com/"
+
+- id: 58
+  category: Operating System
+  software: "CentOS Stream 9"
+  status: TBD
+  type: Open Source
+  riscvEnablement: "https://centos.org/stream9/"
+
+- id: 59
+  category: Operating System
+  software: "ChromeOS Flex"
+  status: TBD
+  type: Commercial
+  riscvEnablement: "https://chromeenterprise.google/os/chromeosflex/"
+
+- id: 60
+  category: Operating System
+  software: "Chromium"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://chromium.googlesource.com/chromium/src/+/17f17cb52401b94113cadb3ba1f256d389baa00f"
+
+- id: 61
+  category: Operating System
+  software: "Debian (riscv64)"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://wiki.debian.org/Ports/riscv64"
+
+- id: 62
+  category: Operating System
+  software: "Fedora"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://openkoji.iscas.ac.cn/pub/stats/"
+
+- id: 63
+  category: Operating System
+  software: "openSUSE"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://build.opensuse.org/project/show/openSUSE:Factory:RISCV"
+
+- id: 64
+  category: Operating System
+  software: "Red Hat Enterprise Linux (RHEL)"
+  status: TBD
+  type: Commercial
+  riscvEnablement: "https://developers.redhat.com/products/rhel/download"
+
+- id: 65
+  category: Operating System
+  software: "SUSE Linux Enterprise"
+  status: TBD
+  type: Commercial
+  riscvEnablement: "https://www.suse.com/products/"
+
+- id: 66
+  category: Operating System
+  software: "Ubuntu"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://ubuntu.com/download/risc-v"
+
+- id: 67
+  category: Operating System
+  software: "Linux Kernel (Torvalds tree)"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.kernel.org/doc/html/v6.3/riscv/index.html"
+
+- id: 68
+  category: Operating System
+  software: "Little Kernel (LK)"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/littlekernel/lk"
+
+- id: 69
+  category: Operating System
+  software: "Apache NuttX"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://nuttx.apache.org/docs/latest/platforms/risc-v/index.html"
+
+- id: 70
+  category: Operating System
+  software: "Project Oberon V"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "http://oberon.wikidot.com/project-oberon-v"
+
+- id: 71
+  category: Operating System
+  software: "Gentoo"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://wiki.gentoo.org/wiki/Project:RISC-V"
+
+- id: 72
+  category: Operating System
+  software: "Android (RISC-V Port)"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://github.com/riscv-android-src/riscv-android"
+
+- id: 73
+  category: Operating System
+  software: "xv6"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://pdos.csail.mit.edu/6.828/2022/xv6.html"
+
+- id: 74
+  category: Operating System
+  software: "FreeBSD"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://wiki.freebsd.org/riscv"
+
+- id: 75
+  category: Operating System
+  software: "Green Hills RISC-V Development"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.ghs.com/products/RISC-V_development.html"
+
+- id: 76
+  category: Operating System
+  software: "OpenBSD"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.openbsd.org/riscv64.html"
+
+- id: 77
+  category: Operating System
+  software: "QNX"
+  status: TBD
+  type: Commercial
+  riscvEnablement: "https://blackberry.qnx.com/en"
+
+- id: 78
+  category: Operating System
+  software: "deepin"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.deepin.org/zh/download/"
+
+- id: 79
+  category: Operating System
+  software: "illumos Allwinner D1 Nezha"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/n-hys/illumos-gate/wiki/Allwinner-D1-Nezha"
+
+- id: 80
+  category: Operating System
+  software: "Hubris"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/oxidecomputer/hubris/discussions/365"
+
+- id: 81
+  category: Operating System
+  software: "FreeRTOS"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.freertos.org/RTOS_ports.html"
+
+- id: 82
+  category: Operating System
+  software: "Haiku"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.haiku-os.org/blog/kallisti5/2021-11-07_booting_our_risc-v_images/"
+
+- id: 83
+  category: Operating System
+  software: "openEuler"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.openeuler.org/en/other/search/?search=risc-v"
+
+- id: 84
+  category: Operating System
+  software: "Alpine Linux"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://gitlab.alpinelinux.org/alpine/aports/-/issues/13269"
+
+- id: 85
+  category: Operating System
+  software: "RT-Thread"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/RT-Thread/rt-thread"
+
+- id: 86
+  category: Operating System
+  software: "Rocky Linux"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://rockylinux.org"
+
+- id: 87
+  category: Operating System
+  software: "PikeOS"
+  status: Enabled
+  type: Commercial
+  riscvEnablement: "https://www.sysgo.com/pikeos"
+
+- id: 88
+  category: Operating System
+  software: "Yocto Project"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://www.yoctoproject.org/"
+
+- id: 89
+  category: Operating System
+  software: "Arch Linux (RISC-V)"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/archlinux-riscv"
+
+- id: 90
+  category: Operating System
+  software: "Apache Mynewt"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/apache/mynewt-core"
+
+- id: 91
+  category: Operating System
+  software: "NTNU RISC-V OS Thesis"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://ntnuopen.ntnu.no/ntnu-xmlui/bitstream/handle/11250/2902876/no.ntnu:inspera:74730513:31541262.pdf?sequence=1"
+
+- id: 92
+  category: QEMU Virtualization
+  software: "QEMU"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.qemu.org/docs/master/system/target-riscv.html"
+
+- id: 93
+  category: RTOS
+  software: "VxWorks"
+  status: TBD
+  type: Commercial
+  riscvEnablement: "https://www.windriver.com/products/vxworks"
+
+- id: 94
+  category: SAIL ISA Modeling
+  software: "sail-riscv"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/riscv/sail-riscv"
+
+- id: 95
+  category: Scripting Tools
+  software: "Perl"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.perl.org/"
+
+- id: 96
+  category: Scripting Tools
+  software: "gecko-dev-riscv"
+  status: Optimized
+  type: Open Source
+  riscvEnablement: "https://github.com/plctlab/gecko-dev-riscv/"
+
+- id: 97
+  category: Scripting Tools
+  software: "PHP"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/php/php-src"
+
+- id: 98
+  category: Security
+  software: "OpenSSL"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://patches.linaro.org/project/oe-core/patch/eb96dfefc160bdb993345a46db2e18c4990ced3a.1507250774.git.raj.khem@gmail.com/"
+
+- id: 99
+  category: Simulator
+  software: "gem5"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.gem5.org/about/"
+
+- id: 100
+  category: SPIKE Simulator
+  software: "Spike"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/riscv-software-src/riscv-isa-sim"
+
+- id: 101
+  category: Storage
+  software: "SPDK"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://riscvsummit2022.sched.com/event/1CZsi/demo-storage-acceleration-with-spdk-on-risc-v-kumar-sankaran-ventana-micro-systems"
+
+- id: 102
+  category: Storage
+  software: "Ceph"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/ceph/ceph"
+
+- id: 103
+  category: Supervisor Binary Interface
+  software: "RustSBI"
+  status: Optimized
+  type: Open Source
+  riscvEnablement: "https://github.com/rustsbi/rustsbi"
+
+- id: 104
+  category: Supervisor Binary Interface
+  software: "OpenSBI"
+  status: Optimized
+  type: Open Source
+  riscvEnablement: "https://github.com/riscv-software-src/opensbi"
+
+- id: 105
+  category: Tooling
+  software: "Swift (RISC-V)"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/swift-riscv"
+
+- id: 106
+  category: Tooling
+  software: "Microchip Mi-V"
+  status: Enabled
+  type: Commercial
+  riscvEnablement: "https://www.microchip.com/en-us/products/fpgas-and-plds/fpga-and-soc-design-tools/mi-v"
+
+- id: 107
+  category: Tooling
+  software: "SystemTap"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://rpmfind.net/linux/rpm2html/search.php?query=systemtap-runtime(riscv-64)"
+
+- id: 108
+  category: Tooling
+  software: "Valgrind"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://github.com/ultrarisc/valgrind-riscv64"
+
+- id: 109
+  category: Trace Encoder
+  software: "Siemens RISC-V Enhanced Trace Encoder"
+  status: Enabled
+  type: Commercial
+  riscvEnablement: "https://resources.sw.siemens.com/en-US/fact-sheet-risc-v-enhanced-trace-encoder"
+
+- id: 110
+  category: Web Server
+  software: "Nginx"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://nginx.org/en/download.html"
+
+- id: 111
+  category: Web Server
+  software: "Apache HTTP Server"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/apache/httpd"
