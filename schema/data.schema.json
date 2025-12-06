@@ -1,40 +1,32 @@
 {
-    "type": "array",
-    "items": {
-      "type": "object",
-      "required": [
-        "id",
-        "category",
-        "software",
-        "status",
-        "type",
-        "riscvEnablement"
-      ],
-      "additionalProperties": false,
-      "properties": {
-        "id": {
-          "type": ["integer", "string"]
-        },
-        "category": {
-          "type": "string",
-          "minLength": 1
-        },
-        "software": {
-          "type": "string",
-          "minLength": 1
-        },
-        "status": {
-          "type": "string",
-          "enum": ["Enabled", "In Progress", "TBD", "Optimized"]
-        },
-        "type": {
-          "type": "string",
-          "minLength": 1
-        },
-        "riscvEnablement": {
-          "type": "string",
-          "format": "uri"
-        }
-      }
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RISC-V Software Ecosystem Entry",
+  "type": "object",
+  "required": ["id", "category", "software", "status", "type", "riscvEnablement"],
+  "properties": {
+    "id": {
+      "type": ["string", "number"]
+    },
+    "category": {
+      "type": "string",
+      "minLength": 1
+    },
+    "software": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": ["Enabled", "In Progress", "TBD", "Optimized"]
+    },
+    "type": {
+      "type": "string",
+      "minLength": 1
+    },
+    "riscvEnablement": {
+      "type": "string",
+      "format": "uri"
     }
-  }
+  },
+  "additionalProperties": false
+}
