@@ -16,7 +16,7 @@ const Header: React.FC<HeaderProps> = ({ lastUpdated, totalCount }) => {
         />
         <div>
           <h1 className="text-2xl md:text-3xl font-semibold text-[#003262]">
-            RISC-V Software Ecosystem
+            Software Ecosystem
           </h1>
           <p className="mt-1 text-sm text-slate-600">
             Tracking enablement status across key software packages. {""}
