@@ -774,3 +774,668 @@
   status: Enabled
   type: Open Source
   riscvEnablement: "https://github.com/apache/httpd"
+
+- id: 112
+  category: AI
+  software: "ONNX Runtime"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/microsoft/onnxruntime"
+
+- id: 113
+  category: AI
+  software: "Apache MXNet"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://mxnet.apache.org"
+
+- id: 114
+  category: AI
+  software: "PaddlePaddle"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.paddlepaddle.org.cn"
+
+- id: 115
+  category: AI
+  software: "Tencent ncnn"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/Tencent/ncnn"
+
+- id: 116
+  category: AI
+  software: "Apache TVM"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://tvm.apache.org"
+
+- id: 117
+  category: AI
+  software: "OpenCV (RISC-V RVV HAL)"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/opencv/opencv"
+
+- id: 118
+  category: API (Web)
+  software: "Node.js"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://nodejs.org"
+
+- id: 119
+  category: Languages
+  software: ".NET (dotnet)"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://github.com/dotnet/runtime"
+
+- id: 120
+  category: Languages
+  software: "GHC (Glasgow Haskell Compiler)"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://www.haskell.org/ghc/"
+
+- id: 121
+  category: Languages
+  software: "Erlang/OTP"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.erlang.org"
+
+- id: 122
+  category: Languages
+  software: "Julia"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://julialang.org"
+
+- id: 123
+  category: Languages
+  software: "LuaJIT"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://luajit.org"
+
+- id: 124
+  category: Simulator
+  software: "Renode"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/renode/renode"
+
+- id: 125
+  category: Tooling
+  software: "Newlib C Library"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://sourceware.org/newlib/"
+
+- id: 126
+  category: Tooling
+  software: "OpenOCD"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "http://openocd.org"
+
+- id: 127
+  category: Hypervisor
+  software: "Xen Hypervisor"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://xenproject.org"
+
+- id: 128
+  category: Hypervisor
+  software: "Cloud Hypervisor"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://github.com/cloud-hypervisor/cloud-hypervisor"
+
+- id: 129
+  category: Containers
+  software: "Docker Engine"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://docs.docker.com/engine/"
+
+- id: 130
+  category: Containers
+  software: "Podman"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://podman.io"
+
+- id: 131
+  category: Databases
+  software: "Redis"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://redis.io"
+
+- id: 132
+  category: Databases
+  software: "TiDB"
+  status: TBD
+  type: Open Source
+  riscvEnablement: "https://github.com/pingcap/tidb"
+
+- id: 133
+  category: Libraries
+  software: "gperftools"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/gperftools/gperftools"
+
+- id: 134
+  category: Libraries
+  software: "jemalloc"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/jemalloc/jemalloc"
+
+- id: 135
+  category: Operating System
+  software: "seL4 Microkernel"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://sel4.systems"
+
+- id: 136
+  category: Operating System
+  software: "RTEMS"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.rtems.org"
+
+- id: 137
+  category: Operating System
+  software: "Plan 9 (9front)"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "http://9front.org"
+
+- id: 138
+  category: Operating System
+  software: "NixOS"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://nixos.org"
+
+- id: 139
+  category: Operating System
+  software: "Tizen"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://www.tizen.org"
+
+- id: 140
+  category: Operating System
+  software: "NetBSD"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://www.netbsd.org/ports/riscv/"
+
+- id: 141
+  category: Simulator
+  software: "TinyEMU"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://bellard.org/tinyemu/"
+
+- id: 142
+  category: Emulator
+  software: "Box64"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://github.com/ptitSeb/box64"
+
+- id: 143
+  category: Scripting Tools
+  software: "Ruby"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.ruby-lang.org"
+
+- id: 144
+  category: HPC
+  software: "MPICH"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.mpich.org"
+
+- id: 145
+  category: HPC
+  software: "SLURM"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://slurm.schedmd.com"
+
+- id: 146
+  category: AI
+  software: "XNNPACK"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://github.com/google/XNNPACK"
+
+- id: 147
+  category: Media
+  software: "FFmpeg"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://ffmpeg.org"
+
+- id: 148
+  category: Media
+  software: "VLC Media Player"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.videolan.org/vlc/"
+
+- id: 149
+  category: Graphics
+  software: "Mesa3D"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.mesa3d.org"
+
+- id: 150
+  category: Operating System
+  software: "OpenMandriva Lx"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://www.openmandriva.org"
+
+- id: 151
+  category: Firmware
+  software: "UEFI (EDK II)"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/tianocore/edk2"
+
+- id: 152
+  category: Virtualization
+  software: "libvirt"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://libvirt.org"
+
+- id: 153
+  category: Operating System
+  software: "Redox OS"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://www.redox-os.org"
+
+- id: 154
+  category: Emulator
+  software: "Hangover"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://github.com/AndreRH/hangover"
+
+- id: 155
+  category: Media
+  software: "dav1d AV1 Decoder"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://code.videolan.org/videolan/dav1d"
+
+- id: 156
+  category: Security
+  software: "OpenSSH"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.openssh.com"
+
+- id: 157
+  category: Tools
+  software: "GNU Emacs"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.gnu.org/software/emacs/"
+
+- id: 158
+  category: Tools
+  software: "Neovim"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://neovim.io"
+
+- id: 159
+  category: Graphics
+  software: "Blender"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.blender.org"
+
+- id: 160
+  category: WebAssembly
+  software: "Wasmtime"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://github.com/bytecodealliance/wasmtime"
+
+- id: 161
+  category: WebAssembly
+  software: "WasmEdge"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/WasmEdge/WasmEdge"
+
+- id: 162
+  category: Languages
+  software: "Mono"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.mono-project.com"
+
+- id: 163
+  category: Languages
+  software: "Zig"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://ziglang.org"
+
+- id: 164
+  category: Languages
+  software: "LDC (D Compiler)"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/ldc-developers/ldc"
+
+- id: 165
+  category: Libraries
+  software: "FFTW"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.fftw.org"
+
+- id: 166
+  category: Libraries
+  software: "riscv-dnn"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/riscv-software-src/riscv-dnn"
+
+- id: 167
+  category: Operating System
+  software: "openKylin"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.openkylin.top"
+
+- id: 168
+  category: Operating System
+  software: "Manjaro Linux"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://manjaro.org"
+
+- id: 169
+  category: Operating System
+  software: "RIOT OS"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.riot-os.org"
+
+- id: 170
+  category: Operating System
+  software: "Contiki-NG"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://contiki-ng.org"
+
+- id: 171
+  category: Operating System
+  software: "Huawei LiteOS"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/LiteOS/LiteOS"
+
+- id: 172
+  category: Security (TEE)
+  software: "Keystone Enclave"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://keystone-enclave.org"
+
+- id: 173
+  category: Multimedia
+  software: "GStreamer (ORC)"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://gstreamer.freedesktop.org"
+
+- id: 174
+  category: Office Suite
+  software: "LibreOffice"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.libreoffice.org"
+
+- id: 175
+  category: Hypervisor
+  software: "Jailhouse"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://github.com/siemens/jailhouse"
+
+- id: 176
+  category: Tooling
+  software: "DynamoRIO"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://github.com/DynamoRIO/dynamorio"
+
+- id: 177
+  category: AI
+  software: "TensorFlow Lite"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.tensorflow.org/lite"
+
+- id: 178
+  category: AI
+  software: "PyTorch (LibTorch)"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://pytorch.org"
+
+- id: 179
+  category: Operating System
+  software: "OpenWrt"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://openwrt.org"
+
+- id: 180
+  category: Bootloader
+  software: "Barebox"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.barebox.org"
+
+- id: 181
+  category: Languages
+  software: "Mono (Xamarin)"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/mono/mono"
+
+- id: 182
+  category: Scripting Tools
+  software: "MicroPython"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://micropython.org"
+
+- id: 183
+  category: Libraries
+  software: "Zstandard (zstd)"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://facebook.github.io/zstd/"
+
+- id: 184
+  category: Libraries
+  software: "zlib"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://zlib.net"
+
+- id: 185
+  category: Multimedia
+  software: "ORC (Optimization and Runtime Compiler)"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://gstreamer.freedesktop.org/projects/orc/"
+
+- id: 186
+  category: Bootloader
+  software: "GRUB (riscv64 EFI)"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.gnu.org/software/grub/"
+
+- id: 187
+  category: Tooling
+  software: "strace"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://strace.io"
+
+- id: 188
+  category: Tooling
+  software: "PAPI (Performance API)"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://icl.utk.edu/papi/"
+
+- id: 189
+  category: Databases
+  software: "Samba"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.samba.org"
+
+- id: 190
+  category: Libraries
+  software: "Opus Codec"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://opus-codec.org"
+
+- id: 191
+  category: Web Server
+  software: "Caddy"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://caddyserver.com"
+
+- id: 192
+  category: HPC
+  software: "UCX (Unified Communication X)"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.openucx.org"
+
+- id: 193
+  category: GUI Toolkit
+  software: "Qt"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.qt.io"
+
+- id: 194
+  category: Build Tool
+  software: "CMake"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://cmake.org"
+
+- id: 195
+  category: Build Tool
+  software: "Cython"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://cython.org"
+
+- id: 196
+  category: Operating System
+  software: "RISC-V Proxy Kernel (riscv-pk)"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/riscv-software-src/riscv-pk"
+
+- id: 197
+  category: Operating System
+  software: "Rocky Linux (riscv64)"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://rockylinux.org"
+
+- id: 198
+  category: Operating System
+  software: "Android (AOSP on RISC-V)"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://source.android.com"
+
+- id: 199
+  category: Tooling
+  software: "musl libc"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://musl.libc.org"
+
+- id: 200
+  category: Tooling
+  software: "manylinux (riscv64)"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/pypa/manylinux"
+
+- id: 201
+  category: Operating System
+  software: "Armbian (RISC-V images)"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://www.armbian.com"
+
+- id: 202
+  category: Operating System
+  software: "DietPi (RISC-V images)"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://dietpi.com"
+
+- id: 203
+  category: Tooling
+  software: "Verilator"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.veripool.org/verilator/"
+
+- id: 204
+  category: Tooling
+  software: "Yosys"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://yosyshq.net/yosys/"
+
+- id: 205
+  category: Tooling
+  software: "LLDB (RISC-V support)"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://lldb.llvm.org"
+
+- id: 206
+  category: Operating System
+  software: "Fedora (RISC-V distribution)"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://fedoraproject.org/wiki/Architectures/RISC-V"
