@@ -1,6 +1,21 @@
 import React from "react";
 
-const DataTable = ({
+interface DataTableProps {
+  data: any[];
+  fullLength: number;
+  page: number;
+  setPage: (page: number) => void;
+  totalPages: number;
+  pageSize: number;
+  showAll: boolean;
+  setShowAll: (val: boolean) => void;
+  onExportCsv: () => void;
+  sortBy: "software" | "category" | "status" | "type";
+  sortDirection: "asc" | "desc";
+  onSortChange: (key: "software" | "category" | "status" | "type") => void;
+}
+
+const DataTable: React.FC<DataTableProps> = ({
   data,
   fullLength,
   page,
@@ -15,11 +30,11 @@ const DataTable = ({
   onSortChange,
 }) => {
   const handlePrev = () => {
-    setPage((p) => Math.max(1, p - 1));
+    setPage(Math.max(1, page - 1));
   };
 
   const handleNext = () => {
-    setPage((p) => Math.min(totalPages, p + 1));
+    setPage(Math.min(totalPages, page + 1));
   };
 
   const renderSortIcon = (columnKey: string) => {
@@ -35,7 +50,7 @@ const DataTable = ({
 
   return (
     <section className="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
-      <div className="px-6 py-4 flex items-center justify-between">
+      <div className="px-6 py-4 flex items-center justify-between gap-4">
         <div>
           <h2 className="text-sm font-semibold text-slate-700">
             All Packages
@@ -51,30 +66,39 @@ const DataTable = ({
         </div>
 
         <div className="flex items-center gap-3 text-xs">
+          {/* Save CSV */}
           <button
             onClick={onExportCsv}
             className="inline-flex items-center gap-2 rounded-full border border-[#003262]/30 bg-white px-3 py-1.5 text-[11px] font-semibold text-[#003262] hover:bg-[#003262]/10 transition-colors"
           >
-            Save as CSV
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#003262"
+              strokeWidth="2"
+              className="h-4 w-4"
+            >
+              <path d="M4 3h11l5 5v13H4z" />
+              <path d="M13 3v6h6" />
+              <path d="M9 13h6v6H9z" />
+              <path d="M11 15v2" />
+            </svg>
+            <span>Save CSV</span>
           </button>
 
-          <div className="flex items-center gap-1 text-xs text-slate-600">
+          {/* Show all toggle */}
+          <label className="inline-flex items-center gap-2 text-xs text-slate-600">
+            <input
+              type="checkbox"
+              checked={showAll}
+              onChange={(e) => setShowAll(e.target.checked)}
+              className="h-3 w-3 rounded border-slate-300 text-[#003262] focus:ring-[#FDB515]"
+            />
             <span>Show all</span>
-            <button
-              type="button"
-              onClick={() => setShowAll((prev) => !prev)}
-              className={`relative inline-flex h-4 w-8 items-center rounded-full transition-colors ${
-                showAll ? "bg-[#003262]" : "bg-slate-300"
-              }`}
-            >
-              <span
-                className={`inline-block h-3 w-3 transform rounded-full bg-white shadow transition-transform ${
-                  showAll ? "translate-x-4" : "translate-x-1"
-                }`}
-              />
-            </button>
-          </div>
+          </label>
 
+          {/* Pagination */}
           {!showAll && (
             <div className="flex items-center gap-2 text-xs">
               <button
@@ -112,6 +136,18 @@ const DataTable = ({
         <table className="min-w-full text-left text-sm">
           <thead className="border-t border-b border-slate-100 bg-slate-50">
             <tr>
+              {/* Software first */}
+              <th className="px-6 py-3 text-xs font-semibold text-slate-500">
+                <button
+                  type="button"
+                  onClick={() => onSortChange("software")}
+                  className="flex items-center gap-1 hover:text-slate-700"
+                >
+                  <span>Software</span>
+                  {renderSortIcon("software")}
+                </button>
+              </th>
+              {/* Category */}
               <th className="px-6 py-3 text-xs font-semibold text-slate-500">
                 <button
                   type="button"
@@ -125,16 +161,6 @@ const DataTable = ({
               <th className="px-6 py-3 text-xs font-semibold text-slate-500">
                 <button
                   type="button"
-                  onClick={() => onSortChange("software")}
-                  className="flex items-center gap-1 hover:text-slate-700"
-                >
-                  <span>Software</span>
-                  {renderSortIcon("software")}
-                </button>
-              </th>
-              <th className="px-6 py-3 text-xs font-semibold text-slate-500">
-                <button
-                  type="button"
                   onClick={() => onSortChange("type")}
                   className="flex items-center gap-1 hover:text-slate-700"
                 >
@@ -142,6 +168,7 @@ const DataTable = ({
                   {renderSortIcon("type")}
                 </button>
               </th>
+              {/* Status (last) */}
               <th className="px-6 py-3 text-xs font-semibold text-slate-500">
                 <button
                   type="button"
@@ -155,31 +182,45 @@ const DataTable = ({
             </tr>
           </thead>
           <tbody>
-            {data.map((row) => (
+            {data.map((row: any) => (
               <tr
                 key={row.id}
                 className="border-b border-slate-50 hover:bg-slate-50/70 transition-colors"
               >
+                {/* Software */}
+                <td className="px-6 py-3 text-sm text-[#003262] whitespace-nowrap">
+                  {row.riscvEnablement ? (
+                    <a
+                      href={row.riscvEnablement}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline font-medium text-[#003262] flex items-center gap-1"
+                    >
+                      <span>{row.software}</span>
+                      <span className="ml-0.5 text-[10px] text-[#003262]">
+                        ↗
+                      </span>
+                    </a>
+                  ) : (
+                    <span className="font-medium text-slate-700">
+                      {row.software}
+                    </span>
+                  )}
+                </td>
+
+                {/* Category */}
                 <td className="px-6 py-3 text-sm text-slate-700 whitespace-nowrap">
                   {row.category}
                 </td>
-                <td className="px-6 py-3 text-sm text-[#003262] whitespace-nowrap">
-                  <a
-                    href={row.riscvEnablement}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:underline font-medium text-[#003262]"
-                  >
-                    {row.software}
-                    <span className="ml-1 text-xs text-[#003262]">↗</span>
-                  </a>
-                </td>
+
                 <td className="px-6 py-3 text-sm text-slate-700 whitespace-nowrap">
                   {row.type}
                 </td>
+
+                {/* Status */}
                 <td className="px-6 py-3 text-sm">
                   <span
-                    className={`inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium ${
+                    className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-[11px] font-semibold tracking-wide ${
                       row.status === "Enabled"
                         ? "bg-emerald-50 text-emerald-700"
                         : row.status === "In Progress"

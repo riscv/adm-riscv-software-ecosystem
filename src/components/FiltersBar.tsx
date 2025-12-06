@@ -73,7 +73,7 @@ const FiltersBar: React.FC<FiltersBarProps> = ({
         </div>
 
         {/* Dropdown filters */}
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap items-end gap-4">
           <Select
             label="Category"
             value={filters.category}
@@ -92,6 +92,18 @@ const FiltersBar: React.FC<FiltersBarProps> = ({
             onChange={(v) => onFilterChange("status", v)}
             options={statusOptions}
           />
+          <button
+            type="button"
+            onClick={() => {
+              onSearchChange("");
+              onFilterChange("category", "All");
+              onFilterChange("type", "All");
+              onFilterChange("status", "All");
+            }}
+            className="rounded-full bg-[#003262] text-white px-4 py-1.5 text-xs font-semibold hover:bg-[#002147] transition-colors flex items-center"
+          >
+            Clean Filters
+          </button>
         </div>
       </div>
     </section>

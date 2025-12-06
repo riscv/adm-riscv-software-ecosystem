@@ -9,9 +9,6 @@ import DataTable from "./components/DataTable";
 const AUTO_REFRESH_SECONDS = 300; // 5 minutes
 const PAGE_SIZE = 100;
 
-// YAML source served from the same origin (Vite dev / GitHub Pages)
-const DATA_URL = `${import.meta.env.BASE_URL}data.yaml`;
-
 type Row = {
   id: number | string;
   category: string;
@@ -36,23 +33,23 @@ const App: React.FC = () => {
   const [page, setPage] = useState(1);
   const [showAll, setShowAll] = useState(false);
 
+  const [secondsRemaining, setSecondsRemaining] = useState(
+    AUTO_REFRESH_SECONDS
+  );
+
   const [sortConfig, setSortConfig] = useState<{
-    key: "category" | "software" | "status" | "type";
+    key: "software" | "category" | "status" | "type";
     direction: "asc" | "desc";
   }>({
     key: "software",
     direction: "asc",
   });
 
-  const [secondsRemaining, setSecondsRemaining] = useState(
-    AUTO_REFRESH_SECONDS
-  );
-
   // Fetch YAML once per page load
   useEffect(() => {
     const loadData = async () => {
       try {
-        const res = await fetch(`${DATA_URL}?t=${Date.now()}`, {
+        const res = await fetch(`${import.meta.env.BASE_URL}data.yaml?t=${Date.now()}`, {
           cache: "no-store",
         });
         if (!res.ok) {
@@ -72,7 +69,7 @@ const App: React.FC = () => {
     loadData();
   }, []);
 
-  // Auto-refresh countdown (full page reload)
+  // Auto-refresh countdown
   useEffect(() => {
     const interval = setInterval(() => {
       setSecondsRemaining((prev) => {
@@ -87,7 +84,7 @@ const App: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Derived filter options
+  // Filter options
   const categoryOptions = useMemo(() => {
     const set = new Set(rawData.map((d) => d.category).filter(Boolean));
     return ["All", ...Array.from(set).sort()];
@@ -103,7 +100,7 @@ const App: React.FC = () => {
     return ["All", ...Array.from(set).sort()];
   }, [rawData]);
 
-  // 1) Apply ONLY Category/Type/Status filters (for chart + table)
+  // 1) Filters (Category / Type / Status) – for table & export only
   const filteredByFilters = useMemo(() => {
     let out = [...rawData];
 
@@ -120,7 +117,7 @@ const App: React.FC = () => {
     return out;
   }, [rawData, filters]);
 
-  // 2) Apply search only for table/export (NOT for chart)
+  // 2) Search – table/export only
   const filteredData = useMemo(() => {
     if (!search.trim()) return filteredByFilters;
 
@@ -134,10 +131,11 @@ const App: React.FC = () => {
     );
   }, [filteredByFilters, search]);
 
+  // 3) Sorting – on Software / Category / Status only
   const sortedData = useMemo(() => {
     const copy = [...filteredData];
 
-    copy.sort((a: any, b: any) => {
+    copy.sort((a: Row, b: Row) => {
       const aVal = (a[sortConfig.key] ?? "").toString().toLowerCase();
       const bVal = (b[sortConfig.key] ?? "").toString().toLowerCase();
 
@@ -149,6 +147,7 @@ const App: React.FC = () => {
     return copy;
   }, [filteredData, sortConfig]);
 
+  // Pagination
   const totalPages = useMemo(() => {
     if (showAll) return 1;
     return Math.max(1, Math.ceil(sortedData.length / PAGE_SIZE));
@@ -161,20 +160,20 @@ const App: React.FC = () => {
   }, [sortedData, page, showAll]);
 
   useEffect(() => {
-    // Reset to first page whenever filters, search, or sort change
+    // Reset page whenever filters, search or sort change
     setPage(1);
   }, [filters, search, sortConfig]);
 
-  // CSV export of *currently filtered + sorted view* (filters + search + sort)
+  // CSV export of filtered + sorted view
   const handleExportCsv = () => {
     if (!sortedData.length) return;
+
     const csv = unparse(
       sortedData.map((row: Row) => ({
         ID: row.id,
         Category: row.category,
         Software: row.software,
         Status: row.status,
-        Type: row.type,
         "RISC-V Enablement": row.riscvEnablement,
       }))
     );
@@ -228,10 +227,10 @@ const App: React.FC = () => {
           totalCount={rawData.length}
         />
 
-        {/* 2. Chart – affected ONLY by dropdown filters */}
-        <StatusDonut data={filteredByFilters} />
+        {/* 2. Chart – global, UNFILTERED */}
+        <StatusDonut data={rawData} />
 
-        {/* 3. Control pane – search + filters */}
+        {/* 3. Search + filters */}
         <FiltersBar
           search={search}
           onSearchChange={setSearch}
@@ -242,7 +241,7 @@ const App: React.FC = () => {
           statusOptions={statusOptions}
         />
 
-        {/* 4. Table – filters + search + pagination + CSV + show all */}
+        {/* 4. Table */}
         <DataTable
           data={pagedData}
           fullLength={sortedData.length}
@@ -260,8 +259,7 @@ const App: React.FC = () => {
               prev.key === key
                 ? {
                     key,
-                    direction:
-                      prev.direction === "asc" ? "desc" : "asc",
+                    direction: prev.direction === "asc" ? "desc" : "asc",
                   }
                 : { key, direction: "asc" }
             )
