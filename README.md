@@ -136,9 +136,5 @@ Example entry:
 
 ## Contributing
 
-1. Edit `public/data.yaml`
-2. Validate:
+Please refer to [CONTRIBUTING.md](CONTRIBUTING.md) for detailed instructions on how to add or update packages.
 
-```bash
-npm run validate:data
-```
