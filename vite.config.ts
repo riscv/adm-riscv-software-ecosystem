@@ -3,5 +3,5 @@ import react from "@vitejs/plugin-react-swc";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/riscv-software-ecosystem/", // GH Pages base path
+  base: "/adm-riscv-software-ecosystem/", // GH Pages base path
 });

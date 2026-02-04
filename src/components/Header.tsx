@@ -26,6 +26,14 @@ const Header: React.FC<HeaderProps> = ({ lastUpdated, totalCount }) => {
       </div>
 
       <div className="flex flex-col md:flex-row gap-3 md:items-center">
+        <a
+          href="https://github.com/riscv/adm-riscv-software-ecosystem/blob/main/CONTRIBUTING.md"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 text-sm font-semibold text-white bg-[#003262] px-4 py-2 rounded-full hover:bg-[#004a8f] transition-colors shadow-sm"
+        >
+          Contributing
+        </a>
         <div className="flex items-center gap-2 text-xs text-slate-600 bg-slate-100 px-3 py-2 rounded-full">
           <span className="uppercase tracking-wide">Last updated</span>
           <span className="font-semibold text-[#003262]">
