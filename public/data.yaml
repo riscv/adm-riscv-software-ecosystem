@@ -71,14 +71,14 @@
 - id: 11
   category: Container Orchestration
   software: "Kubernetes"
-  status: In Progress
+  status: Enabled
   type: Open Source
   riscvEnablement: "https://github.com/CARV-ICS-FORTH/kubernetes-riscv64"
 
 - id: 12
   category: Databases
   software: "MariaDB"
-  status: In Progress
+  status: Enabled
   type: Open Source
   riscvEnablement: "https://riscv.org/blog/2023/08/risc-v-public-beta-platform-release-database-adaptation-evaluation-on-risc-v-server/"
 
@@ -92,7 +92,7 @@
 - id: 14
   category: Databases
   software: "PostgreSQL"
-  status: In Progress
+  status: Enabled
   type: Open Source
   riscvEnablement: "https://www.postgresql.org/docs/current/supported-platforms.html#SUPPORTED-PLATFORMS"
 
@@ -399,10 +399,10 @@
 
 - id: 58
   category: Operating System
-  software: "CentOS Stream 9"
-  status: TBD
+  software: "CentOS Stream"
+  status: In Progress
   type: Open Source
-  riscvEnablement: "https://centos.org/stream9/"
+  riscvEnablement: "https://blog.centos.org/2025/05/initial-centos-support-for-risc-v/"
 
 - id: 59
   category: Operating System
@@ -424,13 +424,6 @@
   status: Enabled
   type: Open Source
   riscvEnablement: "https://wiki.debian.org/Ports/riscv64"
-
-- id: 62
-  category: Operating System
-  software: "Fedora"
-  status: Enabled
-  type: Open Source
-  riscvEnablement: "https://openkoji.iscas.ac.cn/pub/stats/"
 
 - id: 63
   category: Operating System
@@ -495,13 +488,6 @@
   type: Open Source
   riscvEnablement: "https://wiki.gentoo.org/wiki/Project:RISC-V"
 
-- id: 72
-  category: Operating System
-  software: "Android (RISC-V Port)"
-  status: In Progress
-  type: Open Source
-  riscvEnablement: "https://github.com/riscv-android-src/riscv-android"
-
 - id: 73
   category: Operating System
   software: "xv6"
@@ -520,7 +506,7 @@
   category: Operating System
   software: "Green Hills RISC-V Development"
   status: Enabled
-  type: Open Source
+  type: Commercial
   riscvEnablement: "https://www.ghs.com/products/RISC-V_development.html"
 
 - id: 76
@@ -533,9 +519,9 @@
 - id: 77
   category: Operating System
   software: "QNX"
-  status: TBD
+  status: Enabled
   type: Commercial
-  riscvEnablement: "https://blackberry.qnx.com/en"
+  riscvEnablement: "https://www.eenewseurope.com/en/ldra-extends-risc-v-support-adds-qnx/"
 
 - id: 78
   category: Operating System
@@ -610,9 +596,9 @@
 - id: 88
   category: Operating System
   software: "Yocto Project"
-  status: In Progress
+  status: Enabled
   type: Open Source
-  riscvEnablement: "https://www.yoctoproject.org/"
+  riscvEnablement: "https://riscv.org/riscv-news/2025/05/risc-v-international-and-the-rise-project-join-forces-for-yocto-project-support/"
 
 - id: 89
   category: Operating System
@@ -645,9 +631,9 @@
 - id: 93
   category: RTOS
   software: "VxWorks"
-  status: TBD
+  status: Enabled
   type: Commercial
-  riscvEnablement: "https://www.windriver.com/products/vxworks"
+  riscvEnablement: "https://www.windriver.com/news/press/news-22570"
 
 - id: 94
   category: SAIL ISA Modeling
@@ -662,13 +648,6 @@
   status: Enabled
   type: Open Source
   riscvEnablement: "https://www.perl.org/"
-
-- id: 96
-  category: Scripting Tools
-  software: "gecko-dev-riscv"
-  status: Optimized
-  type: Open Source
-  riscvEnablement: "https://github.com/plctlab/gecko-dev-riscv/"
 
 - id: 97
   category: Scripting Tools
@@ -750,9 +729,9 @@
 - id: 108
   category: Tooling
   software: "Valgrind"
-  status: In Progress
+  status: Enabled
   type: Open Source
-  riscvEnablement: "https://github.com/ultrarisc/valgrind-riscv64"
+  riscvEnablement: "https://valgrind.org/docs/manual/dist.readme-riscv64.html"
 
 - id: 109
   category: Trace Encoder
@@ -764,7 +743,7 @@
 - id: 110
   category: Web Server
   software: "Nginx"
-  status: In Progress
+  status: Enabled
   type: Open Source
   riscvEnablement: "https://nginx.org/en/download.html"
 
@@ -820,7 +799,7 @@
 - id: 118
   category: API (Web)
   software: "Node.js"
-  status: In Progress
+  status: Enabled
   type: Open Source
   riscvEnablement: "https://nodejs.org"
 
@@ -876,7 +855,7 @@
 - id: 126
   category: Tooling
   software: "OpenOCD"
-  status: In Progress
+  status: Enabled
   type: Open Source
   riscvEnablement: "http://openocd.org"
 
@@ -974,7 +953,7 @@
 - id: 140
   category: Operating System
   software: "NetBSD"
-  status: In Progress
+  status: Enabled
   type: Open Source
   riscvEnablement: "https://www.netbsd.org/ports/riscv/"
 
@@ -988,7 +967,7 @@
 - id: 142
   category: Emulator
   software: "Box64"
-  status: In Progress
+  status: Enabled
   type: Open Source
   riscvEnablement: "https://github.com/ptitSeb/box64"
 
@@ -1091,14 +1070,14 @@
   riscvEnablement: "https://www.openssh.com"
 
 - id: 157
-  category: Tools
+  category: Tooling
   software: "GNU Emacs"
   status: Enabled
   type: Open Source
   riscvEnablement: "https://www.gnu.org/software/emacs/"
 
 - id: 158
-  category: Tools
+  category: Tooling
   software: "Neovim"
   status: In Progress
   type: Open Source
@@ -1114,9 +1093,9 @@
 - id: 160
   category: WebAssembly
   software: "Wasmtime"
-  status: In Progress
+  status: Enabled
   type: Open Source
-  riscvEnablement: "https://github.com/bytecodealliance/wasmtime"
+  riscvEnablement: "https://docs.wasmtime.dev/stability-platform-support.html"
 
 - id: 161
   category: WebAssembly
@@ -1258,13 +1237,6 @@
   type: Open Source
   riscvEnablement: "https://www.barebox.org"
 
-- id: 181
-  category: Languages
-  software: "Mono (Xamarin)"
-  status: Enabled
-  type: Open Source
-  riscvEnablement: "https://github.com/mono/mono"
-
 - id: 182
   category: Scripting Tools
   software: "MicroPython"
@@ -1315,7 +1287,7 @@
   riscvEnablement: "https://icl.utk.edu/papi/"
 
 - id: 189
-  category: Databases
+  category: Networking
   software: "Samba"
   status: Enabled
   type: Open Source
@@ -1370,20 +1342,6 @@
   type: Open Source
   riscvEnablement: "https://github.com/riscv-software-src/riscv-pk"
 
-- id: 197
-  category: Operating System
-  software: "Rocky Linux (riscv64)"
-  status: In Progress
-  type: Open Source
-  riscvEnablement: "https://rockylinux.org"
-
-- id: 198
-  category: Operating System
-  software: "Android (AOSP on RISC-V)"
-  status: In Progress
-  type: Open Source
-  riscvEnablement: "https://source.android.com"
-
 - id: 199
   category: Tooling
   software: "musl libc"
@@ -1426,16 +1384,184 @@
   type: Open Source
   riscvEnablement: "https://yosyshq.net/yosys/"
 
-- id: 205
-  category: Tooling
-  software: "LLDB (RISC-V support)"
-  status: In Progress
-  type: Open Source
-  riscvEnablement: "https://lldb.llvm.org"
-
 - id: 206
   category: Operating System
   software: "Fedora (RISC-V distribution)"
   status: Enabled
   type: Open Source
   riscvEnablement: "https://fedoraproject.org/wiki/Architectures/RISC-V"
+
+- id: 207
+  category: AI
+  software: "llama.cpp"
+  status: Optimized
+  type: Open Source
+  riscvEnablement: "https://github.com/ggml-org/llama.cpp"
+
+- id: 208
+  category: Databases
+  software: "SQLite"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.sqlite.org"
+
+- id: 209
+  category: Containers
+  software: "containerd"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/containerd/containerd"
+
+- id: 210
+  category: Containers
+  software: "runc"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/opencontainers/runc"
+
+- id: 211
+  category: System
+  software: "systemd"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/systemd/systemd"
+
+- id: 212
+  category: Monitoring
+  software: "Prometheus"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/prometheus/prometheus"
+
+- id: 213
+  category: Databases
+  software: "etcd"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/etcd-io/etcd"
+
+- id: 214
+  category: Multimedia
+  software: "PipeWire"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://pipewire.org"
+
+- id: 215
+  category: WebAssembly
+  software: "WAMR (WebAssembly Micro Runtime)"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/bytecodealliance/wasm-micro-runtime"
+
+- id: 216
+  category: Build Tool
+  software: "Meson"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://mesonbuild.com"
+
+- id: 217
+  category: GNU Toolchain
+  software: "GFortran"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://gcc.gnu.org/fortran/"
+
+- id: 218
+  category: System
+  software: "BusyBox"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://busybox.net"
+
+- id: 219
+  category: Display Server
+  software: "Wayland"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://wayland.freedesktop.org"
+
+- id: 220
+  category: Display Server
+  software: "X.Org Server"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.x.org"
+
+- id: 221
+  category: Desktop Environment
+  software: "GNOME"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://gitlab.gnome.org/GNOME"
+
+- id: 222
+  category: Desktop Environment
+  software: "KDE Plasma"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://kde.org"
+
+- id: 223
+  category: Desktop Environment
+  software: "Xfce"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.xfce.org"
+
+- id: 224
+  category: Package Manager
+  software: "Flatpak"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://github.com/flatpak/flatpak"
+
+- id: 225
+  category: Game Engine
+  software: "Godot Engine"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://godotengine.org"
+
+- id: 226
+  category: Monitoring
+  software: "Grafana"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://github.com/grafana/grafana"
+
+- id: 227
+  category: Networking
+  software: "HAProxy"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.haproxy.org"
+
+- id: 228
+  category: Security
+  software: "libsodium"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://libsodium.org"
+
+- id: 229
+  category: Desktop Environment
+  software: "Sway"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://github.com/swaywm/sway"
+
+- id: 230
+  category: Infrastructure
+  software: "Terraform"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://github.com/hashicorp/terraform"
+
+- id: 231
+  category: Tooling
+  software: "Vim"
+  status: Enabled
+  type: Open Source
+  riscvEnablement: "https://www.vim.org"
