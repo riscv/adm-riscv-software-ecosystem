@@ -1572,3 +1572,10 @@
   status: Enabled
   type: Open Source
   riscvEnablement: "https://ubuntu.com/risc-v"
+
+- id: 233
+  category: Emulator
+  software: "Champollion"
+  status: In Progress
+  type: Open Source
+  riscvEnablement: "https://github.com/dorian-zhao/champollion/releases/tag/v0.1.0"
